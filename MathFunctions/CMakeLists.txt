@@ -18,3 +18,8 @@ target_include_directories(MathFunctions
 					      return 0;
 					        }
 						" HAVE_EXP)
+
+						if(HAVE_LOG AND HAVE_EXP)
+							  target_compile_definitions(MathFunctions
+								                               PRIVATE "HAVE_LOG" "HAVE_EXP")
+									       endif()
